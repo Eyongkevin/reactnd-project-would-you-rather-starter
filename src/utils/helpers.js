@@ -16,6 +16,7 @@ export function formatBoardScores(user, questions, loggedInUser){
         
     }
     return{
+        id,
         name,
         avatarURL,
         answered,
