@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.recentlyLogedInfo{
+  font-size: 8px;
+  
+}
+
+.question {
+  border: 1px solid orange;
+  max-width: 600px;
+}
+.questionColumn{
+  height: 68px;
+  max-width: 600px;
+}
+.question-title{
+  margin-left: 13px;
+  font-size: 14px;
+  max-width:  2px;
+}
+
+.date-display{
+  display: block;
+  font-size: 10px;
+  margin-left: 50px;
+  color:rgb(243, 225, 217)
+}
+.questionResult-wyr{
+  font-size: 15px;
+  text-decoration: orangered;
+  color: orangered;
+}
+.votes{
+  float: right;
+}
+.chosenQuestionColor {
+  /*border: 1px solid rgb(240, 215, 170); */
+  background-color: rgb(250, 245, 235);
+  
+}
+.checkmark{
+  margin-left: auto;
+  margin-right: auto;
+}
+.total-vote{
+  border: 1px solid rgb(31, 22, 7);
+}
+
+.nav ul {
+  height: 50px;
+  list-style-type: none;
+  overflow: hidden;
+  margin-top: 16px;
+  padding: 0;
+  text-decoration: none;
+}
+.nav li  {
+  line-height: 1.6;
+  float: left;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+.nav li.fr {
+  float: right;
+  padding-top: 0px;
+}
+.nav .avatar {
+  height: 25px;
+  float: none;
+  margin-top: 10px;
+}
+.nav .avatar {
+  height: 25px;
+  float: none;
+  margin-top: 10px;
+}
+.profile-image {
+  height: 700px;
+  border-radius: 25px;
+  margin-left: 12px;
+  margin-right: 13px;
+  margin-top: 8px;
+  float: left;
+}
+.link-item{
+  font-size: 16px;
+  color: #252525;
+}
+
+.active {
+  color: orangered;
+  font-weight: 600;
+}
+.link-item:hover {
+  color: orangered;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 85%;
+}
+.board-Q{
+  font-size: 16px
+}
+.board-QS{
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 12px;
+}
+.ui.menu .active.item {
+  background-color: #f2711c!important;
+  color: white
+}
+.score{
+  font-size: 18px;
+}
+.newQSubmit{
+  background-color: #f2711c!important;
+  color: white!important
+}
