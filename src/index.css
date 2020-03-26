@@ -101,6 +101,10 @@ code {
   color: #252525;
 }
 
+.navigate.active {
+  background-color: #f2711c!important;
+  color: white
+}
 .active {
   color: orangered;
   font-weight: 600;

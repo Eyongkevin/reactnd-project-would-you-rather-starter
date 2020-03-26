@@ -8,6 +8,7 @@ export default function PageNotFound(){
             <div className="three row">
                 <div className="column">
                     <img
+                        alt="White books representing 'no question'"
                         src={emptyQuestion}                 
                     />
                     <div>

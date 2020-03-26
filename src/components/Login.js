@@ -56,7 +56,7 @@ class Login extends Component{
                                     </h1>
                                     
                                     <div className="ui hidden divider"></div>
-                                    <img src={logo} className="ui small image centered" />
+                                    <img alt="logo" src={logo} className="ui small image centered" />
                                     <h3 className="ui orange header">
                                         Login
                                         <div className='sub header'>Please Select a User to Log in as</div>
@@ -76,7 +76,7 @@ class Login extends Component{
                                                 <span className="recentlyLogedInfo">Recently logged in as..</span>
                                             <i className="ui image label">
                                                  
-                                                <img src={loggedOutUser.avatarURL} />
+                                                <img alt="Logged out user" src={loggedOutUser.avatarURL} />
                                                 {loggedOutUser.name}
                                             </i>
                                             </div>}
@@ -91,7 +91,7 @@ class Login extends Component{
                                         </div>
                                     </form> 
                                     <h6>Programmed with <i aria-hidden="true" className="like icon red"></i> by
-                                        <a href="https://www.linkedin.com/in/eyong-enowanyo/" target="_blank" className="ui orange "> Eyong Kevin Enowanyo</a></h6>   
+                                        <a href="https://www.linkedin.com/in/eyong-enowanyo/" target="_blank" rel="noopener noreferrer" className="ui orange "> Eyong Kevin Enowanyo</a></h6>   
                                 </div>
                             </div>
                         </div>

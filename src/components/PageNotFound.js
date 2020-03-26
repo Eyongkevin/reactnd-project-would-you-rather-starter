@@ -7,6 +7,7 @@ export default function PageNotFound(){
             <div className="three row">
                 <div className="column">
                     <img
+                        alt="404 error"
                         src={error_404}                 
                     />
                     <div>

@@ -40,7 +40,7 @@ class Nav extends Component {
                     className="ui avatar image profile-image"
                 />
 
-              <a  className='link-item' onClick={this.handleLogout}>
+              <a href='/' className='link-item' onClick={this.handleLogout}>
                 Logout
               </a>
             </li>

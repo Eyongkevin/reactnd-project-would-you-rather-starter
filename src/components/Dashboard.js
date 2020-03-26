@@ -22,25 +22,24 @@ class Dashboard extends Component{
     render() {
         const { showUnanswered } = this.state
         const { UnansweredIDs, answeredIDs } = this.props
-        const setUnansweredClass = showUnanswered ? 'active item': 'item'
-        const setAnsweredClass = showUnanswered ? 'item': 'active item'
+        const setUnansweredClass = showUnanswered ? 'ui button navigate active': 'ui button'
+        const setAnsweredClass = showUnanswered ? 'ui button': 'ui button navigate active'
         const showedQuestionIDs = showUnanswered ? UnansweredIDs: answeredIDs
         
             return(
                 <div>
                     <div className="ui centered grid">
                         <div className="center aligned column">
-                            <div className="ui compact menu">
-                                <a className={setUnansweredClass} onClick = {this.handleUnanswered}>
-                                            Unanswered
-                                            <div className="ui red circular label">{UnansweredIDs.length}</div>
-                                </a>
-                                <a className={setAnsweredClass} onClick={this.handleAnswered}>
-                                            Answered
-                                            <div className="ui green circular label">{answeredIDs.length}</div>
-                                            
-                                </a>
-                            </div>      
+                            
+                                <button className={setUnansweredClass} onClick = {this.handleUnanswered}>
+                                    Unanswered
+                                    &nbsp;<div className="ui red circular label">{UnansweredIDs.length}</div>
+                                </button>
+                                <button className={setAnsweredClass} onClick={this.handleAnswered}>
+                                    Answered
+                                    &nbsp;<div className="ui green circular label">{answeredIDs.length}</div>
+                                </button>
+                                
                         </div>
                     </div>
                     <div className= "ui hidden divider"></div>

@@ -36,6 +36,7 @@ class QuestionChoose extends Component{
                         <div className="three row">
                             <div className="orange column ui left aligned questionColumn">
                                 <img
+                                    alt="User face"
                                     src={avatarURL}
                                     className="ui avatar image mini "
                                 />

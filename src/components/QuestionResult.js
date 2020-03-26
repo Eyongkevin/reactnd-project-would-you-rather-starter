@@ -1,6 +1,6 @@
 import React from 'react'
 import { formatDate } from '../utils/helpers'
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 export default function QuestionResult(props){
@@ -27,6 +27,7 @@ export default function QuestionResult(props){
                         <div className="three row">
                             <div className="orange column ui left aligned questionColumn">
                                 <img
+                                    alt="User face"
                                     src={avatarURL}
                                     className="ui avatar image mini "
                                 />

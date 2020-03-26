@@ -19,6 +19,7 @@ class LeaderBoard extends Component{
                             <div className="three row">
                                 <div className="orange column ui left aligned questionColumn">
                                     <img
+                                        alt="user face"
                                         src={board.avatarURL}
                                         className="ui avatar image mini"
                                     />

@@ -5,7 +5,7 @@ export function formatDate(timestamp) {
 }
 export function formatBoardScores(user, questions, loggedInUser){
     const { id, avatarURL } = user
-    const name = id == loggedInUser ? 'You': user.name
+    const name = id === loggedInUser ? 'You': user.name
     let answered = 0
     let created = 0
     for(const question of Object.entries(questions)){

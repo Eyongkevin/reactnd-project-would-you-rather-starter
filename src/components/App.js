@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux'
-import logo from '../logo.svg';
 import Login from './Login'
 import { handleInitialData } from '../actions/share'
 import {BrowserRouter as Router, Route, Switch, withRouter} from 'react-router-dom';

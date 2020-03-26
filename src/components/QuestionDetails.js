@@ -28,6 +28,7 @@ class QuestionDetails extends Component{
                         <div className="three row">
                             <div className="orange column ui left aligned questionColumn">
                                 <img
+                                    alt="User face"
                                     src={avatarURL}
                                     className="ui avatar image mini "
                                 />
@@ -51,7 +52,7 @@ class QuestionDetails extends Component{
                                 <div className="row">
                                     {optionOneText} &nbsp;
                                     <div className="ui circular labels">
-                                        <a className="ui label">OR</a>
+                                        <i className="ui label">OR</i>
                                     </div> &nbsp;
                                     {optionTwoText}
 
