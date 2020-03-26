@@ -8,7 +8,6 @@ import PageNotFound from './PageNotFound'
 class QuestionMainPage extends Component{
     render(){
         const { results } = this.props
-        console.log(results)
         if(results === null){
             // Redirect to a 404 error page
             return <PageNotFound />
