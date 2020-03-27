@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { formatDate } from '../utils/helpers'
+import BoxHeader from './BoxHeader'
+
 class QuestionDetails extends Component{
     render(){
         const { summary } = this.props
@@ -9,65 +10,40 @@ class QuestionDetails extends Component{
             return <p>Sorry! the question does not exist</p>
         }
         const {
+            name,
             avatarURL,
             optionOneText,
             optionTwoText,
             questionId,
-            timestamp,
-            loggedInUser,
+            timestamp
         } = summary
-        let { name } = summary
-        if (loggedInUser === name){
-            name = 'You ask'
-        }else{
-            name = name + ' asks'
-        }
+        
         return(
             <div>
                 <div className="ui equal width center aligned padded grid">
-                        <div className="three row">
-                            <div className="orange column ui left aligned questionColumn">
-                                <img
-                                    alt="User face"
-                                    src={avatarURL}
-                                    className="ui avatar image mini "
-                                />
-                                <span className="question-title">
-                                    <span>{name} </span>
-                                  
-                                    <span><strong>Would you rather?</strong></span>
-                                    <span className = 'date-display'>
-                                        <i aria-hidden="true" className="time icon"></i>
-                                            {formatDate(timestamp)}
-                                    </span>
+                    <BoxHeader name={name} avatarURL={avatarURL} timestamp={timestamp} />
+                    <div className="three row question ">
+                        <div className="column ui center">
+                            <div className= "ui hidden divider"></div>
+                            <div className="row">
+                                {optionOneText} &nbsp;
+                                <div className="ui circular labels">
+                                    <i className="ui label">OR</i>
+                                </div> &nbsp;
+                                {optionTwoText}
 
-                                </span>
+                            </div>
+                            <div className= "ui hidden divider"></div>
+                            <div className="row">
+                            <Link to={`/questions/${questionId}`} className='btn'>
                                 
-                                
+                                <button className="ui orange basic button">View Poll</button>
+                            </Link>
                             </div>
                         </div>
-                        <div className="three row question ">
-                            <div className="column ui center">
-                                <div className= "ui hidden divider"></div>
-                                <div className="row">
-                                    {optionOneText} &nbsp;
-                                    <div className="ui circular labels">
-                                        <i className="ui label">OR</i>
-                                    </div> &nbsp;
-                                    {optionTwoText}
 
-                                </div>
-                                <div className= "ui hidden divider"></div>
-                                <div className="row">
-                                <Link to={`/questions/${questionId}`} className='btn'>
-                                    
-                                    <button className="ui orange basic button">View Poll</button>
-                                </Link>
-                                </div>
-                            </div>
-   
-                        </div>
                     </div>
+                </div>
                 <div className= "ui hidden divider"></div>
             </div>
             
@@ -79,9 +55,15 @@ class QuestionDetails extends Component{
 function mapStateToProps ({users, auth, questions}, { quesId }) {
     const question = questions[quesId]
     const author = question.author
-    const {name, avatarURL} = users[author]
+    const {avatarURL} = users[author]
     const { loggedInUser }  = auth
     
+    let { name } = users[author]
+        if ( name === users[loggedInUser].name ){
+            name = 'You ask'
+        }else{
+            name = name + ' asks'
+        }
 
   
     return {
@@ -92,8 +74,7 @@ function mapStateToProps ({users, auth, questions}, { quesId }) {
             optionOneText: question.optionOne.text,
             optionTwoText: question.optionTwo.text,
             timestamp: question.timestamp,
-            questionId : quesId,
-            loggedInUser: users[loggedInUser].name
+            questionId : quesId
             
         }
         : null

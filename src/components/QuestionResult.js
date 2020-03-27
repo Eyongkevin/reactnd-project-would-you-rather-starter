@@ -1,5 +1,5 @@
 import React from 'react'
-import { formatDate } from '../utils/helpers'
+import BoxHeader from './BoxHeader'
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
@@ -24,26 +24,7 @@ export default function QuestionResult(props){
     return(
         <div>
                 <div className="ui equal width center aligned padded grid">
-                        <div className="three row">
-                            <div className="orange column ui left aligned questionColumn">
-                                <img
-                                    alt="User face"
-                                    src={avatarURL}
-                                    className="ui avatar image mini "
-                                />
-                                <span className="question-title">
-                                    <span>{name} </span>
-
-                                    <span className = 'date-display'>
-                                        <i aria-hidden="true" className="time icon"></i>
-                                            {formatDate(timestamp)}
-                                    </span>
-
-                                </span>
-                                
-                                
-                            </div>
-                        </div>
+                        <BoxHeader name={name} avatarURL={avatarURL} timestamp={timestamp} />   
                         
                         <div className="three row question ">
                             <div className="column ui center">

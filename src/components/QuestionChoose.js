@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { formatDate } from '../utils/helpers'
 import { Form, Radio } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { handleSaveQuestionChosenAnswer } from '../actions/questions'
+import BoxHeader from './BoxHeader'
 
 
 class QuestionChoose extends Component{
@@ -33,26 +33,9 @@ class QuestionChoose extends Component{
         return(
             <div>
                 <div className="ui equal width center aligned padded grid">
-                        <div className="three row">
-                            <div className="orange column ui left aligned questionColumn">
-                                <img
-                                    alt="User face"
-                                    src={avatarURL}
-                                    className="ui avatar image mini "
-                                />
-                                <span className="question-title">
-                                    <span>{name} </span>
+                        
+                    <BoxHeader name={name} avatarURL={avatarURL} timestamp={timestamp} />
 
-                                    <span className = 'date-display'>
-                                        <i aria-hidden="true" className="time icon"></i>
-                                            {formatDate(timestamp)}
-                                    </span>
-
-                                </span>
-                                
-                                
-                            </div>
-                        </div>
                         <div className="three row question ">
                             <div className="column ui center">
                                 <span className="ui header">Would you rather ..</span>

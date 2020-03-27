@@ -1,26 +1,16 @@
 import React, { Fragment } from 'react'
-
+import BoxHeader from './BoxHeader'
 
 export default function ScoreBoard(props){
-    const { board } = props
+    const { avatarURL,
+            name,
+            answered,
+            created,
+            score } = props.board
     return(
         <Fragment>
             <div className="ui equal width center aligned padded grid">
-                    <div className="three row">
-                        <div className="orange column ui left aligned questionColumn">
-                            <img
-                                alt="user face"
-                                src={board.avatarURL}
-                                className="ui avatar image mini"
-                            />
-                            <span className="question-title">
-                                <span>{board.name} </span>
-
-                            </span>
-                            
-                            
-                        </div>
-                    </div>
+                    <BoxHeader name={name} avatarURL={avatarURL} timestamp={null} />
                     <div className="three row question ">                       
                     <div className="ui divided two column grid ">
                         <div className="stretched row">
@@ -28,12 +18,12 @@ export default function ScoreBoard(props){
                                 <div className= "ui hidden divider"></div>
                                 <div className="row">
                                     <span className="board-Q">Answered Questions: </span>
-                                    <span className="board-QS">{board.answered}</span>
+                                    <span className="board-QS">{answered}</span>
                                 </div>
                                 <div className= "ui hidden divider"></div>
                                 <div className="row">
                                     <span className="board-Q">Created Questions: </span>
-                                    <span className="board-QS">{board.created}</span>
+                                    <span className="board-QS">{created}</span>
                                 </div>
                             
                             </div>
@@ -41,7 +31,7 @@ export default function ScoreBoard(props){
                             <div className="three wide column">
                             <div className="row">Score</div>
                             <div className="row">
-                                <div className="ui green circular label">{board.score}</div>
+                                <div className="ui green circular label">{score}</div>
                             </div>
                 
                             </div>
