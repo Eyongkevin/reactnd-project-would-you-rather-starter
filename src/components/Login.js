@@ -3,13 +3,19 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { Select } from 'semantic-ui-react'
 import { handleLoginUser } from '../actions/auth'
-import logo from '../logo.svg'
+import logo from '../images/logo.svg'
+import PropTypes from 'prop-types'
 
 class Login extends Component{
     state = {
         userSelected: ''
     }
 
+    /**
+     * @description set state for user selected option
+     * @param {array} e - event
+     * @param {array} data - contains the value of the selected option
+     */
     handleChange = (e, data) =>{
         const userSelected = data.value;
         
@@ -18,6 +24,11 @@ class Login extends Component{
             
         }))
     }
+
+    /**
+     * @description dispatch and action to log in the user
+     * @param {array} e - event
+     */
     submitLogin = (e) =>{
         e.preventDefault()
         const { dispatch } = this.props;
@@ -84,9 +95,9 @@ class Login extends Component{
                                             </div>
 
                                             <button className="ui button orange fluid" 
-                                                    disabled = {this.state.userSelected === ''} 
-                                                    onClick = {this.submitLogin}
-                                                    >Log In</button>
+                                                disabled = {this.state.userSelected === ''} 
+                                                onClick = {this.submitLogin}
+                                                >Log In</button>
 
                                         </div>
                                     </form> 
@@ -103,7 +114,12 @@ class Login extends Component{
     }
 }
 
-
+/**
+ * @description  Get information of all available users for display. Also, check for previously logged in user
+ * @param {array} users - contain information about the user
+ * @param {array} auth - contain details about the logged in user
+ * @returns { array }  array of user details and information about present logged in user and previously logged in user
+ */
 function mapStateToProps({users, auth}){
     const LoginUsers = Object.keys(users).map((userID) =>{
         return ({
@@ -123,5 +139,11 @@ function mapStateToProps({users, auth}){
 
 }
 
+// Run typechecking on the props
+Login.propTypes = {
+    LoginUsers: PropTypes.array.isRequired,
+    IsAuth: PropTypes.bool,
+    loggedOutUser: PropTypes.object
+  }
 
 export default  connect(mapStateToProps)(Login);

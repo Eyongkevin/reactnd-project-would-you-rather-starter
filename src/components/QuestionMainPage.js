@@ -4,6 +4,7 @@ import { formatQuestionResults } from '../utils/helpers'
 import QuesionResult from './QuestionResult'
 import QuestionChoose from './QuestionChoose'
 import PageNotFound from './PageNotFound'
+import PropTypes from 'prop-types'
 
 class QuestionMainPage extends Component{
     render(){
@@ -32,5 +33,11 @@ function mapStateToProps ({users, auth, questions}, { match }){
         results: question ? formatQuestionResults(question, users[question.author], auth.loggedInUser ) : null
     }
 }
+
+// Run typechecking on the props
+QuestionMainPage.propTypes = {
+    results: PropTypes.object
+    }
+      
 export default connect(mapStateToProps)(QuestionMainPage)
 

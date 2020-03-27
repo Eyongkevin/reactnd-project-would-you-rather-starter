@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import BoxHeader from './BoxHeader'
+import PropTypes from 'prop-types'
 
 class QuestionDetails extends Component{
     render(){
@@ -81,5 +82,9 @@ function mapStateToProps ({users, auth, questions}, { quesId }) {
     }
   }
 
+// Run typechecking on the props
+QuestionDetails.propTypes = {
+summary: PropTypes.object
+}
   
 export default connect(mapStateToProps)(QuestionDetails)

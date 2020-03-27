@@ -9,11 +9,20 @@ class QuestionChoose extends Component{
     state ={
         chosenOption: ''
     }
+    /**
+     * @description set state with the chosen option
+     * @param {array} e - event
+     * @param {string} value - the option chosen
+     */
     handleOptionChange = (e, {value}) =>{
         this.setState({
             chosenOption : value
         });
     }
+
+    /**
+     * @description dispatch an action to save the option chosen for a question
+     */
     submitChoice = (e) =>{
         e.preventDefault()
         const {dispatch, results } = this.props
@@ -44,22 +53,22 @@ class QuestionChoose extends Component{
                                     <div className= "ui hidden divider"></div>
                                         <Form>
                                             <Form.Field>
-                                            <Radio
-                                                label={optionOneText}
-                                                name='choose'
-                                                value='optionOne'
-                                                checked={this.state.chosenOption === 'optionOne'}
-                                                onChange={this.handleOptionChange}
-                                            />
+                                                <Radio
+                                                    label={optionOneText}
+                                                    name='choose'
+                                                    value='optionOne'
+                                                    checked={this.state.chosenOption === 'optionOne'}
+                                                    onChange={this.handleOptionChange}
+                                                />
                                             </Form.Field>
                                             <Form.Field>
-                                            <Radio
-                                                label={optionTwoText}
-                                                name='choose'
-                                                value='optionTwo'
-                                                checked={this.state.chosenOption === 'optionTwo'}
-                                                onChange={this.handleOptionChange}
-                                            />
+                                                <Radio
+                                                    label={optionTwoText}
+                                                    name='choose'
+                                                    value='optionTwo'
+                                                    checked={this.state.chosenOption === 'optionTwo'}
+                                                    onChange={this.handleOptionChange}
+                                                />
                                             </Form.Field>
                                         </Form>
            

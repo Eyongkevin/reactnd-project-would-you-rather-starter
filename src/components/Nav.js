@@ -2,9 +2,14 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { handleLogoutUser } from '../actions/auth'
+import PropTypes from 'prop-types'
 
 class Nav extends Component {
 
+  /**
+   * @description log out user from app
+   * @param {array} e - event
+   */
   handleLogout = (e) =>{
       e.preventDefault()
       this.props.dispatch(handleLogoutUser(this.props.loggedUserID))
@@ -53,16 +58,27 @@ class Nav extends Component {
   }
 }
 
+/**
+ * @description Get logged in user's details 
+ * @param {array} users - contain information about the user
+ * @param {array} auth - contain details about the logged in user
+ * @returns {array} details about the logged in user
+ */
 function mapStateToProps({users, auth}){
     const loggedUser = auth ? users[auth.loggedInUser]: {}
     const loggedUserID = auth ? auth.loggedInUser: null
     return{
-        loggedUser: loggedUser,
+        loggedUser,
         IsAuth: auth ? auth.IsAuth : false,
         loggedUserID: loggedUserID
     }
 
 }
 
-
+// Run typechecking on the props
+Nav.propTypes = {
+  loggedUser: PropTypes.object,
+  IsAuth: PropTypes.bool,
+  loggedUserID: PropTypes.string
+}
 export default  connect(mapStateToProps)(Nav)

@@ -2,16 +2,25 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import QuestionDetails from './QuestionDetails'
 import NoQuestion from './NoQuestions'
+import PropTypes from 'prop-types'
 
 class Dashboard extends Component{
     state = { showUnanswered: true }
 
+    /**
+     * @description set the state `showUnanswered` to true
+     * @param {array} e - event 
+     */
     handleUnanswered = (e) =>{
         e.preventDefault()
         this.setState({
             showUnanswered: true
         })
     }
+    /**
+     * @description set the state `showUnanswered` to false
+     * @param {array} e - event 
+     */
     handleAnswered = (e) =>{
         e.preventDefault()
         this.setState({
@@ -54,6 +63,12 @@ class Dashboard extends Component{
             )
         }
 }
+/**
+ * @description filter questions into answered and unanswered for the logged in user
+ * @param {array} questions - information about the questions
+ * @param {array} auth - contain details about the logged in user 
+ * @returns {array} arrays of answered and unanswered questions sorted by their timestamp
+ */
 
 function mapStateToProps({auth, questions}){
     const { loggedInUser }  = auth
@@ -75,6 +90,12 @@ function mapStateToProps({auth, questions}){
 
 
 }
+// Run typechecking on the props
+Dashboard.propTypes = {
+    UnansweredIDs: PropTypes.array.isRequired,
+    answeredIDs: PropTypes.array.isRequired
+  }
+
 export default connect(mapStateToProps)(Dashboard)
 
 

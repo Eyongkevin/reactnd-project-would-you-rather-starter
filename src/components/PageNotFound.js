@@ -1,5 +1,5 @@
 import React from 'react'
-import error_404 from '../error_404.png'
+import error_404 from '../images/error_404.png'
 
 export default function PageNotFound(){
     return(

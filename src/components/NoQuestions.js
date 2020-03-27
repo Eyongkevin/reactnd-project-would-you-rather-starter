@@ -1,5 +1,5 @@
 import React from 'react'
-import emptyQuestion from '../emptyQuestion.jpg'
+import emptyQuestion from '../images/emptyQuestion.jpg'
 
 export default function PageNotFound(){
 

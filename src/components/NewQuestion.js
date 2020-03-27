@@ -9,18 +9,33 @@ class NewQuestion extends Component {
         optionTwoText: '',
         returnToHome: false
     }
+
+    /**
+     * @description set state when user selects option one
+     * @param {array} e - event
+    */
     handleOptionOneChange = (e) =>{
         const text = e.target.value
         this.setState(() =>({
             optionOneText: text
         }))
     }
+
+    /**
+     * @description set state when user selects option two
+     * @param {array} e - event
+    */
     handleOptionTwoChange = (e) =>{
         const text = e.target.value
         this.setState(() =>({
             optionTwoText: text
         }))
     }
+
+    /**
+     * @description dispatch an action to add a new question and set states
+     * @param {array} e - event
+    */
     handleSubmit = (e) =>{
         e.preventDefault()
         const {optionOneText, optionTwoText } = this.state;
@@ -46,29 +61,29 @@ class NewQuestion extends Component {
                 <div className="stretched  row">
                 <div className="ten wide column">
                         <form className="ui form" onSubmit={this.handleSubmit}>
-                                <div className="field">                         
-                                    <input 
-                                    placeholder="Enter Option One Text Here"
-                                    value={optionOneText}
-                                    onChange={this.handleOptionOneChange} />
-                                </div>
-                                    &nbsp;
-                                    <div className="ui circular labels ">
-                                        <i className="ui label">OR</i>
-                                    </div> 
-                                    &nbsp;
-                                <div className="field">                          
-                                    <input 
-                                    placeholder="Enter Option Two Text Here"
-                                    value={optionTwoText}
-                                    onChange={this.handleOptionTwoChange} />
-                                </div>
-                                <button 
-                                    type="submit"
-                                    className="ui button newQSubmit"
-                                    disabled={optionOneText ==='' || optionTwoText === ''}>
-                                 Submit
-                                 </button>
+                            <div className="field">                         
+                                <input 
+                                placeholder="Enter Option One Text Here"
+                                value={optionOneText}
+                                onChange={this.handleOptionOneChange} />
+                            </div>
+                                &nbsp;
+                                <div className="ui circular labels ">
+                                    <i className="ui label">OR</i>
+                                </div> 
+                                &nbsp;
+                            <div className="field">                          
+                                <input 
+                                placeholder="Enter Option Two Text Here"
+                                value={optionTwoText}
+                                onChange={this.handleOptionTwoChange} />
+                            </div>
+                            <button 
+                                type="submit"
+                                className="ui button newQSubmit"
+                                disabled={optionOneText ==='' || optionTwoText === ''}>
+                                Submit
+                                </button>
                         </form>
                 </div>
                     
@@ -78,9 +93,6 @@ class NewQuestion extends Component {
         )
     }
 }
-function mapStateToProps({ auth }) {
-    return {
-      auth
-    }
-  }
-export default connect(mapStateToProps)(NewQuestion)
+
+
+export default connect()(NewQuestion)
