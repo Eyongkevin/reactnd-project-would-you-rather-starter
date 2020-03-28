@@ -2,7 +2,7 @@ import React from 'react'
 import { formatDate } from '../utils/helpers'
 
 export default function BoxHeader(props){
-    const { avatarURL, name, timestamp } = props 
+    const { avatarURL, name, timestamp, wyr } = props 
     return(
         <div className="three row">
             <div className="orange column ui left aligned questionColumn">
@@ -12,7 +12,7 @@ export default function BoxHeader(props){
                     className="ui avatar image mini "
                 />
                 <span className="question-title">
-                    <span>{name} </span>
+                    <span>{name} </span>{wyr? <span className="wyr">Would You Rather?</span>: null}
 
                     {timestamp 
                     ?

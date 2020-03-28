@@ -1,11 +1,6 @@
 ## TODO
 Friday
-Factorization
-		- Put upper part of all box to a new component
-		- Remove all unneccessary tags 
-		- fix indentation as recommended by the javascript guide
-		- Comment code
-		- add proptype
+
 
 Saturday
 Write write-up
@@ -13,4 +8,9 @@ Submit
 
 
 ## DONE
-- Put upper part of all box to a new component
+Factorization
+		- Put upper part of all box to a new component
+		- Remove all unneccessary tags 
+		- fix indentation as recommended by the javascript guide
+		- Comment code
+		- add proptype

@@ -22,7 +22,7 @@ class QuestionDetails extends Component{
         return(
             <div>
                 <div className="ui equal width center aligned padded grid">
-                    <BoxHeader name={name} avatarURL={avatarURL} timestamp={timestamp} />
+                    <BoxHeader name={name} avatarURL={avatarURL} timestamp={timestamp} wyr={true} />
                     <div className="three row question ">
                         <div className="column ui center">
                             <div className= "ui hidden divider"></div>

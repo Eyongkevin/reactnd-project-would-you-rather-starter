@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { Select } from 'semantic-ui-react'
 import { handleLoginUser } from '../actions/auth'
-import logo from '../images/logo.svg'
+import logo from '../images/logo.png'
 import PropTypes from 'prop-types'
 
 class Login extends Component{
@@ -62,7 +62,7 @@ class Login extends Component{
                             <div className="row" >
                                 <div className="column">
                                     <h1 className="ui orange header">
-                                        Whould You Rather?
+                                        Would You Rather?
                                         <div className="sub header">We're happy to have you here.</div>
                                     </h1>
                                     

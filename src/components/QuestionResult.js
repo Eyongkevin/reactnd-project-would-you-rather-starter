@@ -24,7 +24,7 @@ export default function QuestionResult(props){
     return(
         <div>
             <div className="ui equal width center aligned padded grid">
-                <BoxHeader name={name} avatarURL={avatarURL} timestamp={timestamp} />   
+                <BoxHeader name={name} avatarURL={avatarURL} timestamp={timestamp} wyr={false} />   
                 
                 <div className="three row question ">
                     <div className="column ui center">

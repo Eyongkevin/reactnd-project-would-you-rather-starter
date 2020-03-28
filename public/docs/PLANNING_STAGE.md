@@ -1,28 +1,22 @@
 # Udacity Project: Would You Rather?
-## Planning Stages
-Before building the project, I will plan the various steps that will be used throughout the project. These steps are:
-- Step 1 - Identify Each View
-- Step 2 - Break Each View Into a Hierarchy of Components
-- Step 3 - Determine What Events Happen in the App
-- Step 4 - Determine What Data Lives in the Store
-
-
 
 ### Step 1 - Identify Each View
 In this step, I will determine the look and functionality of each view in the app. I will be using paper and pencil instead of [mockup softwares](https://codingsans.com/blog/mockup-tools) to draw each view of the app so that I have a good idea of what information and data each view will need
 
 #### View for the Login Page
 
-`Space for image(Login Page)`
+![](./images/login.jpg)
 ##### Login View Requirements
 - Is located at the route (`/login`)
 - Shows welcome message, logo and login instructions.
 - It displays a group of users to log in as 
 - It displays a log in button that logs the selected user into the app.
+- It displays the previously logged in user after log out.
+- Displays the Navigation view at the top
 
-#### View for the Home Page
+#### View for the Home Page(Dashboard)
 
-`Space for Image(Home Page)`
+![](./images/dashboard.jpg)
 ##### Home View Requirements
 - Is located at the route (`/`)
 - Shows questions arranged from the most recently created(top) to the least recently created(bottom).
@@ -33,7 +27,7 @@ In this step, I will determine the look and functionality of each view in the ap
 
 #### View for the Leader Board Page
 
-`Space for Image(LeaderBoard Page)`
+![](./images/leaderBoard.jpg)
 ##### LeaderBoard View Requirements
 - Is located at (`/leaderboard`)
 - Displays the total number of users appearing in the leaderboard
@@ -47,7 +41,7 @@ In this step, I will determine the look and functionality of each view in the ap
 
 ### View for the New Question Page
 
-`Space for Image(New Question Page)`
+![](./images/new_question.jpg)
 ##### New Question View Requirements
 - Is located at (`/add`)
 - has 2 input fields to add the two options
@@ -55,7 +49,7 @@ In this step, I will determine the look and functionality of each view in the ap
 
 ### View for the Poll page - Unanswered Polls
 
-`Space for Image(Pool pag[Unansweted])`
+![](./images/unanswered_roll.jpg)
 ##### Unansweted poll view Requirements
 - Display details of the user who asked the question
     - User name and picture
@@ -64,7 +58,7 @@ In this step, I will determine the look and functionality of each view in the ap
 
 ### View for the Poll page - Answered Polls
 
-`Space for Image(Pool pag[Answered])`
+![](./images/answered_roll.jpg)
 ##### Answered poll view Requirements
 - Display details of the user who asked the question
     - User name and picture
