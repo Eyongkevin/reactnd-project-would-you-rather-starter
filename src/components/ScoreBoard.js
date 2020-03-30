@@ -10,8 +10,8 @@ export default function ScoreBoard(props){
     return(
         <Fragment>
             <div className="ui equal width center aligned padded grid">
-                    <BoxHeader name={name} avatarURL={avatarURL} timestamp={null} />
-                    <div className="three row question ">                       
+                <BoxHeader name={name} avatarURL={avatarURL} timestamp={null} />
+                <div className="three row question ">                       
                     <div className="ui divided two column grid ">
                         <div className="stretched row">
                             <div className="thirteen wide column">

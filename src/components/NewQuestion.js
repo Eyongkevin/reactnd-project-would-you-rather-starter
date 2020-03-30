@@ -57,7 +57,7 @@ class NewQuestion extends Component {
         }
         return(
             <div className="ui equal width center aligned padded grid">
-                <h3 className="ui center aligned header">Create New Question</h3>
+                <h3 className="ui center aligned header">Would You Rather</h3>
                 <div className="stretched  row">
                 <div className="ten wide column">
                         <form className="ui form" onSubmit={this.handleSubmit}>

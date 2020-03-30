@@ -45,48 +45,48 @@ class QuestionChoose extends Component{
                         
                     <BoxHeader name={name} avatarURL={avatarURL} timestamp={timestamp} wyr={false} />
 
-                        <div className="three row question ">
-                            <div className="column ui center">
-                                <span className="ui header">Would you rather ..</span>
-                                          
-                                <div className="row ui center">
-                                    <div className= "ui hidden divider"></div>
-                                        <Form>
-                                            <Form.Field>
-                                                <Radio
-                                                    label={optionOneText}
-                                                    name='choose'
-                                                    value='optionOne'
-                                                    checked={this.state.chosenOption === 'optionOne'}
-                                                    onChange={this.handleOptionChange}
-                                                />
-                                            </Form.Field>
-                                            <Form.Field>
-                                                <Radio
-                                                    label={optionTwoText}
-                                                    name='choose'
-                                                    value='optionTwo'
-                                                    checked={this.state.chosenOption === 'optionTwo'}
-                                                    onChange={this.handleOptionChange}
-                                                />
-                                            </Form.Field>
-                                        </Form>
-           
-                                    </div>
-
-                                <div className="row ui center">
-                                    <div className= "ui hidden divider"></div>
-                                    <button 
-                                        className="ui orange basic button"
-                                        disabled = {this.state.chosenOption === ''}
-                                        onClick = {this.submitChoice}>
-                                                Submit
-                                    </button>
-           
+                    <div className="three row question ">
+                        <div className="column ui center">
+                            <span className="ui header">Would you rather ..</span>
+                                        
+                            <div className="row ui center">
+                                <div className= "ui hidden divider"></div>
+                                    <Form>
+                                        <Form.Field>
+                                            <Radio
+                                                label={optionOneText}
+                                                name='choose'
+                                                value='optionOne'
+                                                checked={this.state.chosenOption === 'optionOne'}
+                                                onChange={this.handleOptionChange}
+                                            />
+                                        </Form.Field>
+                                        <Form.Field>
+                                            <Radio
+                                                label={optionTwoText}
+                                                name='choose'
+                                                value='optionTwo'
+                                                checked={this.state.chosenOption === 'optionTwo'}
+                                                onChange={this.handleOptionChange}
+                                            />
+                                        </Form.Field>
+                                    </Form>
+        
                                 </div>
-                                
+
+                            <div className="row ui center">
+                                <div className= "ui hidden divider"></div>
+                                <button 
+                                    className="ui orange basic button"
+                                    disabled = {this.state.chosenOption === ''}
+                                    onClick = {this.submitChoice}>
+                                            Submit
+                                </button>
+        
                             </div>
+                            
                         </div>
+                    </div>
 
                 </div>
     
